@@ -8,52 +8,13 @@
 		<link rel = "stylesheet" type = "text/css" href = "../css/header.css" />
 		<link rel = "stylesheet" type = "text/css" href = "../css/titleTop.css" />
 		<link rel = "stylesheet" type = "text/css" href = "../css/content.css" />
-		<style type = "text/css">
-			#bottom{
-			    margin-top: 40px;
-			    padding: 30px 0;
-			    border-top: 1px solid #fe7c04;
-			    font-family: Arial, Helvetica, sans-serif;
-			}
-			.#bottom .helpload{
-				border-bottom: 1px solid #ccc;
-				border-top:2px solid #f00;
-				width: 100%;
-				height: 110px;
-				min-height: 110px;
-				height: auto;
-			}
-			.#bottom .helpload .serDetail{
-				margin-top: 20px;
-				margin-bottom: 10px;
-			}
-			.#bottom .helpload .serDetail >li{
-				width:240px;
-				list-style: none;
-				float: left;
-			}
-			
-		</style>
+		<link rel = "stylesheet" type = "text/css" href = "../css/bottom.css" />
+		<style type = "text/css"></style>
 		<script type="text/javascript" src = "../js/tool.js"></script>
 		<script type="text/javascript" src = "../js/jquery-1.11.3.js"></script>
 		<script type="text/javascript" src = "../js/content.js"></script>
+		<script type="text/javascript" src = "../js/bottom.js"></script>
 		<script type="text/javascript">
-			 $(function(){
-			 	$.ajax({
-			 		type:"get",
-			 		url:"../file/help.json",
-			 		dataTtype:"json",
-			 		success:function(data){
-			 			var arr = data["child"];
-			 			for(var i = 0; i < arr.length - 1; i++){
-			 				$(".subDetail").eq(0).clone(true).appendTo($(".serDetail"));
-			 			}
-			 			for(var i = 0; i < arr.length; i++ ){
-			 				$(".serItems .serTitle").eq(i).html('<h2>' + arr[i]["title"] + '</h2>');
-			 			}
-			 		}
-			 	});
-			 });
 		</script>
 	</head>
 
@@ -241,19 +202,19 @@
 						<img class = "leftbImg" src = "../images/index/index_leftblock.png" alt/>
 					</li>
 					<li class = "homePage isSel homePageSel">
-						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/index.html">首页</a>
+						<a href="#">首页</a>
 					</li>
 					<li class = "isSel">
-						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/iCanExchange.html">我能兑换</a>
+						<a class = "iCanExchange" href = "javascript:void(0)">我能兑换</a>
 					</li>
 					<li class = "isSel">
-						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/orderList.html">排行榜</a>
+						<a href="orderList.html">排行榜</a>
 					</li>
 					<li class = "isSel">
-						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/provinceZone.html">省份专区</a>
+						<a href="provinceZone.html">省份专区</a>
 					</li>
 					<li class = "isSel">
-						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/iCanExchange.html">我的账户</a>
+						<a class = "MyAccount" href="javascript:void(0)">我的账户</a>
 					</li>
 				</ul>
 			</div>
@@ -575,7 +536,51 @@
 				</ul>
 			</div>
 			<div class = "footload">
-				
+				<div class = "footerLink">
+					<ul class = "flinks">
+						<li>
+							<a href = "http://info.10010.com/Copyright_n/index3.html" target = "_blank">
+								企业法人营业执照
+							</a>|
+						</li>
+						<li>
+							<a href = "http://info.10010.com/Copyright_n/index2.html" target = "_blank">
+								基础电信业务经营许可证
+							</a>|
+						</li>
+						<li>
+							<a href = "http://info.10010.com/Copyright_n/index.html" target = "_blank">
+								增值电信业务经营许可证
+							</a>|
+						</li>
+						<li>
+							<a href = "http://info.10010.com/Copyright_n/index4.html" target = "_blank">
+								网络文化经营许可证
+							</a>|
+						</li>
+					</ul>
+				</div>
+				<div class = "copyright">
+					<p>Copyright©1999-2016&nbsp;&nbsp;中国联通 &nbsp;版权所有</p>
+					<p>中华人民共和国增值电信业务经营许可证 经营许可证编号：A2.B1.B2-20090003</p>
+				</div>
+				<ol>
+					<dt>
+						<a target = "_blank" href = "http://www.hd315.gov.cn/beian/view.asp?bianhao=010202010121600001">
+							<img src = "../images/index/confirm1.png" alt=""/>
+						</a>
+					</dt>
+					<dt>
+						<a target = "_blank" href = "https://search.szfw.org/cert/l/CX20111216001076001118">
+							<img src = "../images/index/confirm2.png" alt=""/>
+						</a>
+					</dt>
+					<dt>
+						<a target = "_blank" href = "https://ss.knet.cn/verifyseal.dll?sn=e13013011010039034ki4j000000&ct=df&a=1&pa=812015">
+							<img src = "../images/index/confirm.png" alt=""/>
+						</a>
+					</dt>
+				</ol>
 			</div>
 		</div>
 	</body>

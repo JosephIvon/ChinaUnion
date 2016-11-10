@@ -1,3 +1,4 @@
+// 判断字符串是否为空
 function isNoEmpty(str){
 	if(str != "" && str != null && str != undefined){
 		return true;
@@ -65,6 +66,7 @@ function parseImgUrl(id, imgName){
 	}
 	
 	var url = "../images/goodsList/";
+	
 	switch (arr[0]){
 		case '01':
 			url += "communicationGift/";
@@ -259,8 +261,90 @@ function parseImgUrl(id, imgName){
 	return url += imgName;
 }
 
+// 绑定事件的兼容性写法
+function addEvent(obj, type, func){
+	if(obj.addEventListener){
+		obj.addEventListener(type, func, false);
+	}else if(obj.attachEvent){
+		obj.attachEvent("on" + type, func);
+	}
+}
+
+function removeEvent(obj, type, func){
+	if(obj.removeEventListener){
+		obj.removeEventListener(type, func);
+	}else if(obj.detachEvent){
+		obj.detachEvent("on" + type, func);
+	}
+}
+
+// 随机生成4位数的验证码
+function autoMakeRandomFourCode(n){
+	var arr = [];
+	for(var i = 0; i < n; i++){
+		var num  = parseInt(Math.random() * 100);
+		if(num >= 0 && num <= 9){
+			arr.push(num);
+		}else if(num >= 10 && num <= 35){
+			arr.push(String.fromCharCode(num + 87));
+		}else if(num >= 65 && num <= 90){
+			arr.push(String.fromCharCode(num));
+		}else{
+			i--;
+			continue;
+		}
+	}
+	return arr.join("");
+}
 //判断cookie是否为空
 var isEmpty = function (cookieValue) {
     return typeof cookieValue === 'undefined' || cookieValue === 'undefined|undefined' || cookieValue === null
         || cookieValue === '' || cookieValue === '|';
 };
+
+// 设置cookie
+function setCookie(name, value, expires, path, domain, isSecure){
+	var cookieText = encodeURIComponent(name) + "=" + encodeURIComponent(value); //进行cookie的拼接
+	if(expires){
+		cookieText += ";expires=" + expires;
+	}
+	if(path){
+		cookieText += ";path=" + path;
+	}
+	if(domain){
+		cookieText += ";domain=" + domain;
+	}
+	if(isSecure){
+		cookieText += ";secure";
+	}
+	document.cookie = cookieText;
+}
+
+// 获取cookie
+function getCookie(name){
+	var cookieText = decodeURIComponent(document.cookie);
+	var start = cookieText.indexOf(name + "=");
+	if(start == -1){
+		return;
+	}else{
+		var end = cookieText.indexOf(";", start);
+		if(end == -1){
+			end = cookieText.length;
+		}
+		var value = cookieText.substring(start, end);
+		var arr = value.split("=");
+		return arr[1];
+	}	
+}
+
+// 移除cookie
+function removeCookie(name){
+	document.cookie = encodeURIComponent(name) + "= ;expires=" + new Date(0);
+}
+
+function getDate(n){
+	var date = new Date();
+	var day = date.getDate();
+	date.setDate(day + n);
+	return date;
+}

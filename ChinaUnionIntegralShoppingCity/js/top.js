@@ -72,11 +72,10 @@ $(function(){
         $(this).children(".itemPDetail").hide();
         $(this).find(".spanR").show();
     });
-    
 });
 
 function autoLogin(){
-	console.log("设置自动登录");
+	
 }
 
   
