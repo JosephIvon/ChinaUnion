@@ -1,0 +1,150 @@
+#shortcut{
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	background-color: #f4f3f3; 
+}
+.top_nav{
+	width: 1200px;
+	margin: 0 auto;
+}
+#shortcut .top_nav .login{
+	height: 32px;
+	line-height: 32px;
+	float: left;
+}
+#shortcut .top_nav .login a{
+	color: #fe7c04;
+}
+#shortcut .top_nav .rightNav{
+	float: right;
+}
+#shortcut .top_nav .rightNav >li{
+	position: relative;
+    z-index: 10;
+    color: #54565b;
+    width: 90px;
+    padding: 1px 1px 0px 11px;
+    background: none;
+    height: 30px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+#shortcut .top_nav .rightNav >li dl{
+	width: 80px;
+	float: left;
+	border: 1px solid transparent;
+}
+#shortcut .top_nav .rightNav > li dl dt{
+    height: 27px;
+    line-height: 27px;
+}
+#shortcut .top_nav .rightNav > li dl dt img{
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+    margin-left: 5px;
+} 
+#shortcut .top_nav .rightNav > li dl dd,#shortcut .top_nav .rightNav > li dl dd ul li{
+    line-height: 27px;
+}
+#shortcut .top_nav .rightNav > li dl dd ul li a{
+    color: #333;
+    text-decoration: none;
+}
+#shortcut .top_nav .rightNav > li dl dd ul li b{
+    height: 14px;
+    width: 14px;
+    vertical-align: middle;
+    margin-left: 5px;
+    display: inline-block;
+}
+#shortcut .top_nav .rightNav > li .division_line{
+    font-size: 16px;
+    float: left;
+    margin-top: -3px;
+    color: #ccc;
+}
+#shortcut .top_nav .rightNav .attention{
+    width: 140px;
+}
+#shortcut .top_nav .rightNav .attention dl{
+    width: 133px;
+    border: 1px solid transparent;
+    float: left;
+}
+#shortcut .top_nav .rightNav .attention dl dt{
+    height: 27px;
+    line-height: 27px;
+    margin-left: 0;
+}
+#shortcut .top_nav .rightNav .attention dl dt .weixin{
+    height: 20px;
+    width: 23px;
+    vertical-align: middle;
+}
+#shortcut .top_nav .rightNav .attention dl dt img{
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+}
+#shortcut .top_nav .rightNav .attention dl dd{
+	line-height: 27px; 
+}
+#shortcut .top_nav .rightNav .attention dl dd img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto; 
+}
+#shortcut .top_nav .rightNav .download{
+	width: 145px;
+}
+#shortcut .top_nav .rightNav .download dl{
+    width: 138px;
+    border: 1px solid transparent;
+    position: relative;
+}
+#shortcut .top_nav .rightNav .download dl dt{
+    height: 27px;
+    line-height: 27px;
+    background-image: url(../images/index/download.png);
+    background-repeat: no-repeat;
+    background-position: 4px -24px;
+}
+#shortcut .top_nav .rightNav .download dl dt img{
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+    margin-left: 5px; 
+}
+#shortcut .top_nav .rightNav .download dl .downloadBg{
+  	background-position: 4px 3px; 
+}
+#shortcut .top_nav .rightNav .download dl dd{
+	position: absolute;
+	width: 213px;
+	height: 127px;
+	background: url("../images/index/download-img.jpg") no-repeat;
+	top: 26px;
+	right: -1px;
+	border: 1px solid #ccc;
+	z-index: -1; 
+  }
+#shortcut .top_nav .rightNav .download dl dd a{
+    display: block;
+    position: absolute;
+    width: 95px;
+    height: 30px;
+    right: 2px; 
+}
+#shortcut .rightNav .download dl dd .d-androd{
+	top: 53px; 
+}
+#shortcut .rightNav .download dl dd .d-ios{
+	top: 13px; 
+}
+#shortcut .rightNav .rightBorder{
+	border-right: 1px solid #ccc; 
+}

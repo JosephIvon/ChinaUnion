@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>登录首页</title>
+		<link rel = "stylesheet" type="text/css" href = "../css/common.css" />
+		<link rel = "stylesheet" type="text/css" href = "../css/login.css" />
+		
+		</style>
+		<script type="text/javascript" src = "../js/jquery-1.11.3.js">
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				// a标签禁用点击链接属性
+				$(".disabledCss").removeAttr("href").removeAttr("onclick").css("cursor", "normal");
+
+				var aBtn = document.getE
+				
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class = "header_bg">
+			<div class = "header">
+				<a href = "http://www.10010.com" class = "left logo"></a>
+				<span class = "left header_split"></span>
+				<span class = "left header_title">欢迎登录</span>
+				<a href="feedback.html" target="_blank" class = "right advice">体验反馈</a>
+			</div>
+		</div>
+		<div class = "content">
+			<ol>
+		    	<li class="active">1</li>
+		        <li>2</li>
+		        <li>3</li>
+	    	</ol>
+			<ul id = "banner_slide">
+				<li class = "slide" style = "z-index:1; position:absolute; left:0px; top:0px; opacity:1;"><a href = "http://www.10010.com/goodsdetail/981609140208.html"><img src = "../images/login/banner_pic1.jpg" alt = "广告一" /></a></li>
+				<li  class = "slide" style = "z-index:0; position:absolute; left:0px; top:0px; opacity:1;"><a href = "" class = "disabledCss"><img src = "../images/login/banner_pic2.jpg" alt = "广告二" /></a></li>
+				<li class = "slide" style = "z-index:-1; position:absolute; left:0px; top:0px; opacity:1;"><a href = "http://www.10010.com/goodsdetail/981403121719.html"><img src = "../images/login/banner_pic3.jpg" alt = "广告三" /></a></li>
+			</ul>
+		</div>
+		<div class = "footer"></div>
+	</body>
+</html>

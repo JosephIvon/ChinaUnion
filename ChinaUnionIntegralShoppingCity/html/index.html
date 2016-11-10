@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv = "content-type" content = "text/html; charset=UTF-8" />
+		<title>积分商城首页</title>
+		<link rel = "stylesheet" type = "text/css" href = "../css/common.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/shortcut.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/header.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/titleTop.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../css/content.css" />
+		<style type = "text/css">
+			#bottom{
+			    margin-top: 40px;
+			    padding: 30px 0;
+			    border-top: 1px solid #fe7c04;
+			    font-family: Arial, Helvetica, sans-serif;
+			}
+			.#bottom .helpload{
+				border-bottom: 1px solid #ccc;
+				border-top:2px solid #f00;
+				width: 100%;
+				height: 110px;
+				min-height: 110px;
+				height: auto;
+			}
+			.#bottom .helpload .serDetail{
+				margin-top: 20px;
+				margin-bottom: 10px;
+			}
+			.#bottom .helpload .serDetail >li{
+				width:240px;
+				list-style: none;
+				float: left;
+			}
+			
+		</style>
+		<script type="text/javascript" src = "../js/tool.js"></script>
+		<script type="text/javascript" src = "../js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src = "../js/content.js"></script>
+		<script type="text/javascript">
+			 $(function(){
+			 	$.ajax({
+			 		type:"get",
+			 		url:"../file/help.json",
+			 		dataTtype:"json",
+			 		success:function(data){
+			 			var arr = data["child"];
+			 			for(var i = 0; i < arr.length - 1; i++){
+			 				$(".subDetail").eq(0).clone(true).appendTo($(".serDetail"));
+			 			}
+			 			for(var i = 0; i < arr.length; i++ ){
+			 				$(".serItems .serTitle").eq(i).html('<h2>' + arr[i]["title"] + '</h2>');
+			 			}
+			 		}
+			 	});
+			 });
+		</script>
+	</head>
+
+	<body>
+		<div id = "shortcut">
+			<div class = "top_nav">
+				<div class = "login">
+					<span class = "welcome_words" >您好,欢迎来到中国联通网上积分商城!</span>
+					<a class = "webLogin" href = "login.html">【登录】</a>
+				</div>
+				<div id = "noLoginDiv"  style = "display:none;">
+					<span class = "welcome_time"></span>
+					<span class = "username"></span>
+					&nbsp;&nbsp;【积分余额:&nbsp;
+					<soan class = "score"></span>
+					&nbsp;】&nbsp;&nbsp;
+					<a class = "loginout" href = "javascript:void(0);">【退出】</a>
+				</div>
+				<ul class = "rightNav">
+					<li>
+						<dl>
+							<dt>
+								<span>我的账户</span>
+								<img src = "../images/index/index_arrow_down.png" alt/> 
+							</dt>
+							<dd style = "display:none;">
+								<ul>
+									<li>
+										<a href = "javascript:void(0);">我的订单</a>
+										<b></b>
+									</li>
+									<li>
+										<a href = "javascript:void(0);">积分查询</a>
+										<b></b>
+									</li>
+									<li>
+										<a href = "javascript:void(0);">地址管理</a>
+										<b></b>
+									</li>
+									<li>
+										<a href = "javascript:void(0);">我的收藏</a>
+										<b></b>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<span class = "division_line">|<span>
+					</li>
+					<li>
+						<dl style = "background-color: transparent; border: 1px solid transparent;">
+							<dt>
+								<span>帮助中心</span>
+								<img src = "../images/index/index_arrow_down.png" alt/>
+							</dt>
+							<dd style = "display:none;">
+								<ul>
+									<li>
+										<a href = "javascript:void(0);">关于商城</a>
+										<b></b>
+									</li>
+									<li>
+										<a href = "javascript:void(0);">常见问题</a>
+										<b></b>
+									</li>
+									<li>
+										<a href = "javascript:void(0);">公告中心</a>
+										<b></b>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<span class = "division_line">|<span>
+					</li>
+					<li>
+						<dl style = "background-color: transparent; border: 1px solid transparent;">
+							<dt>
+								<span>网站导航</span>
+								<img src = "../images/index/index_arrow_down.png" alt/>
+							</dt>
+							<dd style = "display:none;">
+								<ul>
+									<li>
+										<a href = "javascript:void(0);">联通商城</a>
+										<b></b>
+									</li>
+									<li>
+										<a href = "javascript:void(0);">自助服务</a>
+										<b></b>
+									</li>
+									<li>
+										<a href = "javascript:void(0);">缴费充值</a>
+										<b></b>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<span class = "division_line">|<span>
+					</li>
+					<li class = "attention">
+						<dl style = "background-color: transparent; border: 1px solid transparent;">
+							<dt>
+								<img class = "weixin" src = "../images/index/index_weixin.png" alt/>
+								<span>关注积分商城</span>
+								<img src = "../images/index/index_arrow_down.png" alt/>
+							</dt>
+							<dd style = "display:none;">
+								<img src = "../images/index/index_weixin_code.png" alt />
+							</dd>
+						</dl>
+						<span class = "division_line">|<span>
+					</li>
+					<li class = "download">
+						<dl style = "background-color: transparent; border: 1px solid transparent;">
+							<dt>
+								<span>客户端下载</span>
+								<img src = "../images/index/index_arrow_down.png" alt/>
+							</dt>
+							<dd style = "display:none;">
+								<a class = "d_andriod" href = "#"></a>
+								<a class = "d_ios" href = "#"></a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id = "header" class = "top_nav">
+			<div class = "logo">
+				<a class = "logoImg" href = "http://10.9.16.112/ChinaUnionIntegralShoppingCity/html/index/">
+					<img src = "../images/index/index_logo.png" alt/>
+				</a>
+			</div>
+			<div class = "searchForm">
+				<ul class = "mallSearch">
+					<li class = "searchFrame">
+						<img src = "../images/index/index_search.png" alt/>
+						<input id = "searchInputBox" type = "text" maxlenth = "20" placeholder = "请输入商品名进行检索" />
+					</li>
+					<li id = "searchBtnBox">
+						<span>搜&nbsp;索</span>
+					</li>
+				</ul>
+				<div class = "hotSearch">
+					<span class = "hot">热门搜索：</span>
+					<span id = "hotSearchBox">
+						<a class = "hot_item" href = "javascript:void(0)">&nbsp;充值卡&nbsp;</a>
+						<a class = "hot_item" href = "javascript:void(0)">&nbsp;话费&nbsp;</a>
+						<a class = "hot_item" href = "javascript:void(0)">&nbsp;家居用品&nbsp;</a>
+						<a class = "hot_item" href = "javascript:void(0)">&nbsp;手机配件&nbsp;</a>
+					</span>
+				</div>
+			</div>
+			<div class = "goodsCar">
+				<div class = "goodsCarDiv" style = "background-color:rgb(244, 243, 243)">
+					<img class = "carImg" src = "../images/index/index_carImg.png" alt/>
+					<span class = "word">购物车</span>
+					<img class = "carMore" src = "../images/index/index_arrow_right.png">
+					<span class = "goodsTips">1</span>
+				</div>
+				<div class = "moreGoods" style = "display: none">
+					<div class = "noGoods" style = "display: none">购物车中还没有商品，在商城逛逛吧！</div>
+					<div class = "noLogin" style = "display:none">
+						<p>登录才能看见购物车里的商品哦~</p>
+						<p><span>登录</span></p>
+					</div>
+					<h3 style="display: none">我的购物车</h3>
+					<ul class = "goodsList" style="display: none">
+					</ul>
+					<div class = "goodsCount" style="display: none">
+		                <p>共<span id="cartGoodsCount2">0</span>件商品</p>
+		                <p>共计<span id="sumPrice">0</span>积分</p>
+		                <span class="carBtn">去结算</span>
+		            </div>
+				</div>
+			</div>
+		</div>
+		<div id = "content">
+			<div class = "titleTop">
+				<ul class = "top_nav">
+					<li class = "productKinds">
+						<div>
+							<img class = "pkImg" src = "../images/index/index_pkImg.png" alt/>
+							<span>全部产品分类</span>
+						</div>
+						<img class = "leftbImg" src = "../images/index/index_leftblock.png" alt/>
+					</li>
+					<li class = "homePage isSel homePageSel">
+						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/index.html">首页</a>
+					</li>
+					<li class = "isSel">
+						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/iCanExchange.html">我能兑换</a>
+					</li>
+					<li class = "isSel">
+						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/orderList.html">排行榜</a>
+					</li>
+					<li class = "isSel">
+						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/provinceZone.html">省份专区</a>
+					</li>
+					<li class = "isSel">
+						<a href="http://10.9.160.112/ChinaUnionIntegralShoppingCity/html/iCanExchange.html">我的账户</a>
+					</li>
+				</ul>
+			</div>
+			<div class = "titleContent top_nav">
+				<div class = "contentLeft">
+					<ul class="items">
+        				<li class="item  firstLi">
+        					<div class="itemP" style="border-right-width: 2px; border-right-style: solid; border-right-color: rgb(254, 124, 4);">
+								<p>
+				                    <span class="spanL">通信类礼品</span>
+				                    <img class = "spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+        					</div>
+        					<div class="borderTop" style="display: none"></div>
+				            <div class="borderBottom" style="display: none"></div>
+				            <div class="itemPDetail" style="display: none">
+				                <div>
+				                    <a href="javascript:void(0)">充值卡</a>
+				                    <a href="javascript:void(0)">话费</a>
+				                </div>
+				            </div>
+        				</li>
+        				<li class="item">
+				            <div class="itemP" style="border-right-width: 2px; border-right-style: solid; border-right-color: rgb(254, 124, 4); background-color: white;">
+				                <p>
+				                    <span class="spanL">家居日用</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				            </div>
+				            <div class="borderTop" style="display: none;"></div>
+				            <div class="borderBottom" style="display: none;"></div>
+				            <div class="itemPDetail" style="display: none;">
+				                <div>
+				                    <a href="javascript:void(0)">餐厨百货</a>
+				                    <a href="javascript:void(0)">家居家装</a>
+				                    <a href="javascript:void(0)">生活日用</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item ">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">家用电器</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>"></img>
+				               </p>
+				            </div>
+				            <div class="borderTop" style="display: none"></div>
+				            <div class="borderBottom" style="display: none"></div>
+				            <div class="itemPDetail" style="display: none">
+				                <div>
+				                    <a href="javascript:void(0)">生活电器</a>
+				                    <a href="javascript:void(0)">个护健康</a>
+				                    <a href="javascript:void(0)">厨房电器</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item ">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">手机配件</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				
+				            </div>
+				            <div class="borderTop" style="display: none"></div>
+				            <div class="borderBottom" style="display: none"></div>
+				            <div class="itemPDetail" style="display: none">
+				                <div>
+				                    <a href="javascript:void(0)">手机配件</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item ">
+				            <div class="itemP" style="border-right-width: 2px; border-right-style: solid; border-right-color: rgb(254, 124, 4); background-color: white;">
+				                <p>
+				                    <span class="spanL">数码产品</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				
+				            </div>
+				            <div class="borderTop" style="display: none;"></div>
+				            <div class="borderBottom" style="display: none;"></div>
+				            <div class="itemPDetail" style="display: none;">     
+				                <div>
+				                    <a href="javascript:void(0)">影音娱乐</a>
+				                    <a href="javascript:void(0)">数码配件</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item ">
+				            <div class="itemP" style="border-right-width: 2px; border-right-style: solid; border-right-color: rgb(254, 124, 4); background-color: white;">
+				                <p>
+				                    <span class="spanL">电脑周边</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				            </div>
+				            <div class="borderTop" style="display: none;"></div>
+				            <div class="borderBottom" style="display: none;"></div>
+				            <div class="itemPDetail" style="display: none;">
+				                <div>
+				                    <a href="javascript:void(0)">文具耗材</a>
+				                    <a href="javascript:void(0)">外设产品</a>
+				                    <a href="javascript:void(0)">网络产品</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item ">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">汽车周边</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				
+				            </div>
+				            <div class="borderTop" style="display:none "></div>
+				            <div class="borderBottom" style="display:none "></div>
+				            <div class="itemPDetail" style="display:none ">
+				                <div>
+				                    <a href="javascript:void(0)">汽车装饰</a>
+				                    <a href="javascript:void(0)">美容保养</a>
+				                    <a href="javascript:void(0)">车载电器</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item ">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">箱包配饰</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				
+				            </div>
+				            <div class="borderTop" style="display:none "></div>
+				            <div class="borderBottom" style="display:none "></div>
+				            <div class="itemPDetail" style="display:none ">
+				                <div>
+				                    <a href="javascript:void(0)">创意礼品</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item ">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">个护化妆</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				            </div>
+				            <div class="borderTop" style="display:none "></div>
+				            <div class="borderBottom" style="display:none "></div>
+				            <div class="itemPDetail" style="display:none ">
+				                <div>
+				                    <a href="javascript:void(0)">面部护理</a>
+				                    <a href="javascript:void(0)">身体护理</a>
+				                    <a href="javascript:void(0)">美护工具</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">母婴用品</span>
+				                    <img class="spanR" src="../images/index/index_nav_right.png" alt/>
+				                </p>
+				            </div>
+				            <div class="borderTop" style="display:none "></div>
+				            <div class="borderBottom" style="display:none "></div>
+				            <div class="itemPDetail" style="display:none ">
+				                <div>
+				                    <a href="javascript:void(0)">洗护清洁</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">食品保健</span>
+				                    <img class="spanR" src="http://res.mall.10010.cn/jf-mall/res/web/images/daohang-right.png?resVer=20161031174937"></img>
+				                </p>
+				            </div>
+				            <div class="borderTop" style="display:none "></div>
+				            <div class="borderBottom" style="display:none "></div>
+				            <div class="itemPDetail" style="display:none ">
+				                <div>
+				                    <a href="javascript:void(0)">饮品酒水</a>
+				                    <a href="javascript:void(0)">南北干货</a>
+				                    <a href="javascript:void(0)">粮油米面</a>
+				                    <a href="javascript:void(0)">冲调</a>
+				                    <a href="javascript:void(0)">休闲食品</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">商旅服务</span>
+				                    <img class="spanR" src="http://res.mall.10010.cn/jf-mall/res/web/images/daohang-right.png?resVer=20161031174937"></img>
+				                </p>
+				            </div>
+				            <div class="borderTop" style="display:none "></div>
+				            <div class="borderBottom" style="display:none "></div>
+				            <div class="itemPDetail" style="display:none ">
+				                <div>
+				                    <a href="javascript:void(0)">酒店</a>
+				                    <a href="javascript:void(0)">机票</a>
+				                </div>
+				            </div>
+				        </li>
+				        <li class="item lastLi">
+				            <div class="itemP">
+				                <p>
+				                    <span class="spanL">生活游戏</span>
+				                    <img class="spanR" src="http://res.mall.10010.cn/jf-mall/res/web/images/daohang-right.png?resVer=20161031174937"></img>
+				                </p>
+				            </div>
+				            <div class="borderTop" style="display:none "></div>
+				            <div class="borderBottom" style="display:none "></div>
+				            <div class="itemPDetail" style="display:none ">
+				                <div>
+				                    <a href="javascript:void(0)">餐饮</a>
+				                    <a href="javascript:void(0)">游戏</a>
+				                    <a href="javascript:void(0)">娱乐</a>
+				                    <a href="javascript:void(0)">服务</a>
+				                    <a href="javascript:void(0)">景点门票</a>
+				                </div>
+				            </div>
+				        </li>
+        			</ul>
+        		</div>
+				<div class = "contentMiddle">
+					<ul class = "banner_pic">
+		    		</ul>
+		    		<div class = "page_indicator">
+		    			<ul class = "banner_btn">
+		    			</ul>
+		    		</div>
+		    		<span class = "btnL">&lt;</span>
+		    		<span class = "btnR">&gt;</span>
+				</div>
+				<div class = "contentRight">
+					<p class = "title">
+						<span>商城公告</span>
+						<a href="http://jf.10010.com/jf-mall/notice/list/1">更多</a>
+					</p>
+					<ul class = "notice"></ul>
+					<p class = "title">
+						<span>生活服务</span>
+					</p>
+					<ul class = "liveSer">
+						<li class = "borRi">
+							<a class = "live" target = "_blank">
+								<img alt = ""/>
+								<span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class = "scoreOrder top_nav">
+				<ul>
+					<li class = "firstLi">
+						<img src = "../images/index/index_gift.png" alt=""/>
+						<span>按分值浏览</span>
+					</li>
+					<li>
+						<a class="selected" href="searchPoint.html?PointCode=1">0-1000分</a>
+						<span>|</span>
+					</li>
+					<li>
+						<a class="selected" href="searchPoint.html?PointCode=2">1000-2000分</a>
+						<span>|</span>
+					</li>
+					<li>
+						<a class="selected" href="searchPoint.html?PointCode=3">2000-3000分</a>
+						<span>|</span>
+					</li>
+					<li>
+						<a class="selected" href="searchPoint.html?PointCode=4">3000-5000分</a>
+						<span>|</span>
+					</li>
+					<li>
+						<a class="selected" href="searchPoint.html?PointCode=5">5000-10000分</a>
+						<span>|</span>
+					</li>
+					<li>
+						<a class="selected" href="searchPoint.html?PointCode=6">10000分以上</a>
+					</li>
+				</ul>
+			</div>
+			<ul class = "goodsShow top_nav">
+				<li class = "floor">
+					<h1 class = "floorTitle"></h1>
+					<ul class = "goodsItems">
+						<li class = "item">
+							<a class = "itemPic"><img alt="img"/></a>
+							<a class = "itemTitle"></a>
+							<span>积分：<i></i></span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<ul class = "floorFixed">
+			<li class = "first">
+				<a href = "shopCar.html" target="_self" class = "shopCar" style = "background: url('../images/index/index_shopCar.png') no-repeat; display: inline-block;"></a></li>
+			<li class = "last">
+				<a href = "#" class = "toTop" style = "background: url('../images/index/index_arrow_up.png') no-repeat; display: inline-block;"></a>
+			</li>
+		</ul>
+		<div id = "bottom">
+			<div class = "helpload top_nav">
+				<ul class = "serDetail">
+					<li class = "subDetail">
+						<dl class = "serItems">
+							<dt class = "serTitle"></dt>
+							<dd class = "serItem"></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class = "footload">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src = "../js/top.js"></script>
+</html>
+

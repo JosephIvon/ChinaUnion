@@ -1,0 +1,43 @@
+/* common style */
+html,body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,button,table,th,td,textarea{
+	margin: 0; padding: 0;
+}
+body,input,select,button,textarea{
+	font-size:12px;
+	font-family:"微软雅黑",Tahoma,Arial,Helvetica,Geneva,sans-serif,"宋体";
+	color:#333;
+}
+body{
+	background:#fff;
+	height:100%;
+}
+img{
+	border:0; 
+	vertical-align:middle;
+}
+input{
+	outline:none;
+}
+ul,ol{
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:12px;
+	font-weight:100;
+}
+button{
+	cursor:pointer;  /* 更改鼠标为手势图标 */
+}
+i,em,cite{
+	font-style:normal; /* 取消倾斜，常规显示 */
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+textarea{
+	resize: none; /* 禁止缩放 */
+}

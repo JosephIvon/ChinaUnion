@@ -1,0 +1,354 @@
+.titleTop{
+    height: 47px;
+    background-color: #fe7c04;
+    min-width: 1200px;
+}
+.titleTop > ul{
+	height: 47px; 
+}
+.titleTop > ul .productKinds{
+    position: relative;
+    width: 220px;
+    cursor: pointer;
+}
+.titleTop > ul .productKinds > div{
+    background: #ffa32a;
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.titleTop > ul .productKinds > div .pkImg{
+    display: block;
+    width: 16px;
+    height: 13px;
+    margin: 17px 0 0 20px;
+    float: left;
+}
+
+.titleTop > ul .productKinds > div span{
+    display: block;
+    height: 47px;
+    line-height: 47px;
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.titleTop > ul .productKinds .leftbImg{
+    position: absolute;
+    display: block;
+    z-index: 10;
+    width: 229px;
+    height: 47px;
+}
+.titleTop > ul .homePage{
+	margin-left: 10px; 
+}
+.titleTop > ul .isSel:hover{
+	background: #fde8cb; 
+}
+.titleTop > ul .isSel:hover a{
+    color: #fe7c04; 
+}
+.titleTop > ul li{
+	width: 130px;
+	height: 47px;
+	line-height: 47px;
+	float: left;
+	text-align: center; 
+}
+.titleTop > ul li a{
+    height: 47px;
+    line-height: 47px;
+    width: 125px;
+    display: block;
+    float: left;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none; 
+}
+#content .titleContent{
+	height: 400px;
+}
+#content .titleContent .contentLeft{
+	width: 220px;
+	height: 393px;
+	float: left;
+}
+#content .titleContent .contentLeft .items{
+	width: 220px;
+	height: 393px;
+	top: 0;
+	left: 0; 
+}
+#content .titleContent .contentLeft .items .item{
+  	cursor: pointer;
+  	width: 220px;
+  	height: 30px;
+  	line-height: 30px;
+  	background-color: #ccc;
+  	position: relative;
+  	z-index: 4; 
+}
+#content .titleContent .contentLeft .items .item .itemP{
+	padding: 0 10px;
+	background-color: white;
+	border-right: 2px solid #ffa32a;
+	border-left: 2px solid #ffa32a; 
+}
+#content .titleContent .contentLeft .items .item .itemP > p{
+  	height: 30px;
+  	line-height: 30px;
+  	color: #fe7c04; 
+}
+#content .titleContent .contentLeft .items .item .itemP > p .spanL{
+  	font-size: 12px;
+  	display: inline-block;
+  	float: left;
+  	color: #fe7c04;
+  	height: 30px;
+  	line-height: 30px; 
+}
+#content .titleContent .contentLeft .items .item .itemP > p .spanR{
+  	height: 16px;
+  	width: 16px;
+  	display: inline-block;
+  	float: right;
+  	margin-top: 7px; 
+}
+#content .titleContent .contentLeft .items .item .itemP > p > a{
+  	display: inline-block;
+  	float: left;
+  	color: #fe7c04;
+  	margin-right: 5px; 
+}
+#content .titleContent .contentLeft .items .item .borderTop{
+  	position: absolute;
+  	top: -2px;
+  	left: 0;
+  	width: 220px;
+  	height: 0px;
+  	z-index: 5;
+  	border-top: 2px solid #ffa32a; 
+}
+#content .titleContent .contentLeft .items .item .borderBottom{
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	width: 220px;
+  	height: 0px;
+  	border-bottom: 2px solid #ffa32a;
+  	z-index: 5; 
+}
+#content .titleContent .contentLeft .items .item .itemPDetail {
+  	position: absolute;
+  	top: -2px;
+  	left: 218px;
+  	width: 350px;
+  	height: auto;
+  	overflow: hidden;
+  	border: 2px solid #ffa32a;
+  	background-color: white;
+  	z-index: -1; 
+}
+#content .titleContent .contentLeft .items .item .itemPDetail h3{
+  	width: 100%;
+  	padding: 10px 20px;
+  	font-size: 14px;
+  	font-weight: bold; 
+}
+#content .titleContent .contentLeft .items .item .itemPDetail > div{
+  	padding: 0px 20px; 
+}
+#content .titleContent .contentLeft .items .item .itemPDetail > div a{
+  	display: inline-block;
+  	*display: inline;
+  	*zoom: 1;
+  	margin-right: 10px;
+  	color: #6c6c6c;
+  	height: 18px;
+  	line-height: 18px; 
+}
+#content .titleContent .contentLeft .items .borBottom {
+  	border-bottom: 1px dashed #fe7c04; 
+}
+#content .titleContent .contentLeft .items .lastLi {
+  	border-bottom: 2px solid #ffa32a; 
+}
+#content .titleContent .contentLeft .items .lastLi .borderBottom {
+	bottom: -2px; 
+}
+#content .titleContent .contentLeft .items .lastLi .itemPDetail {
+  	position: absolute;
+  	bottom: -2px;
+  	left: 218px;
+  	width: 350px;
+  	height: auto;
+  	border: 2px solid #ffa32a;
+  	background-color: white;
+  	z-index: -1; 
+}
+#content .titleContent .contentLeft .items .firstLi {
+  	border-top: 2px solid #ffa32a; 
+}
+
+/* index_banner style */
+#content .titleContent .contentMiddle {
+    float: left;
+    height: 380px;
+    margin: 10px 0 0 10px;
+    width: 730px;
+    background-color: cyan;
+    overflow: hidden;
+    position: relative;
+}
+#content .titleContent .contentMiddle .banner_pic{
+	position:absolute;  
+	height: 380px;
+}
+#content .titleContent .contentMiddle .banner_pic >li{
+	width: 730px; 
+	height: 380px; 
+	float: left;
+}
+#content .titleContent .contentMiddle .banner_pic >li a{
+	display: inline-block;
+	width: 730px; 
+	height: 380px; 
+}
+#content .titleContent .contentMiddle .banner_pic >li a img{
+	width: 100%;
+	height: 100%;
+}
+#content .titleContent .contentMiddle .page_indicator{
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 730px;
+    height: 20px;
+    line-height: 20px;
+}
+#content .titleContent .contentMiddle .page_indicator .banner_btn{
+	height: 16px;
+	display: inline-block;
+	margin: 0 auto;
+}
+#content .titleContent .contentMiddle .page_indicator .banner_btn >li{
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+	float:left;
+	margin: 0 10px;
+	background: #ccc;
+}
+#content .titleContent .contentMiddle .page_indicator .banner_btn .active{
+	background: #FE7C04;
+}
+#content .titleContent .contentMiddle span{
+	width: 30px; 
+	height: 60px; 
+	line-height: 60px; 
+	text-align: center; 
+	font-size: 30px; 
+	font-weight: 600; 
+	background-color: transparent; 
+	color: white; 
+	position: absolute; 
+	top: 40%; 
+	display: none; 
+	cursor: pointer; 
+}
+#content .titleContent .contentMiddle .btnL{
+	float: left; 
+	left: 0; 
+}
+#content .titleContent .contentMiddle .btnR{
+	float: right; 
+	right: 0; 
+}
+#content .titleContent .contentRight{
+    border: 1px solid #ccc;
+    float: left;
+    height: 380px;
+    margin: 10px 0 0 10px;
+    width: 228px;
+    background-color: yellow;
+}
+#content .titleContent .contentRight .title{
+	height: 35px;
+	line-height: 35px;
+	padding: 0 15px;
+}
+#content .titleContent .contentRight .title span{
+	float: left;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	font-weight: bold;
+}
+#content .titleContent .contentRight .title a{
+    background: url("../images/index/more-small-left.png") no-repeat scroll 45px 13px;
+    color: #686b72;
+    display: inline-block;
+    float: right;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    width: 50px;
+}
+#content .titleContent .contentRight .notice{
+    border-bottom: 1px dashed #ccc;
+    border-top: 1px dashed #ccc;
+    padding: 5px 0;
+    height: 200px;
+}
+#content .titleContent .contentRight .notice >li{
+	line-height: 30px;
+	height: 30px;
+	padding: 0 15px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#content .titleContent .contentRight .notice >li a:hover{
+	color: #FE7C04;
+}
+#content .titleContent .contentRight .liveSer{
+    border-top: 1px solid #ccc;
+    margin-top: 2px;
+    overflow: hidden;
+    padding: 0 4px;
+}
+#content .titleContent .contentRight .liveSer .borRi{
+    border-right: 1px solid #ccc;
+    float: left;
+}
+#content .titleContent .contentRight .liveSer li > a{
+    display: block;
+    height: 96px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 72px;
+    text-align: center;
+}
+#content .titleContent .contentRight .liveSer li > a img{
+    cursor: pointer;
+    display: block;
+    margin-left: 24px;
+    margin-top: 20px;
+}
+#content .titleContent .contentRigh .liveSer li > a span{
+    color: #000;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
